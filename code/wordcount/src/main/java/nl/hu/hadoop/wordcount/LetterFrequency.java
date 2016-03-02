@@ -27,7 +27,6 @@ public class LetterFrequency {
 		job.setReducerClass(LetterFrequencyReducer.class);
 		job.setInputFormatClass(TextInputFormat.class);
 		job.setOutputKeyClass(Text.class);
-		//job.setOutputValueClass(IntWritable.class);
 		job.setOutputValueClass(Text.class);
 
 		job.waitForCompletion(true);
@@ -58,12 +57,8 @@ class LetterFrequencyMapper extends Mapper<LongWritable, Text, Text, Text> {
 						nextCharacter = word.charAt(i + 1) + "";
 					}
 
-					// only write if there is a nextCharacter
-					//if(nextCharacter != ""){
-						context.write(new Text(character), new Text(nextCharacter));
-					//}
-					// raise the index for the next character
-					i++;
+				context.write(new Text(character), new Text(nextCharacter));
+				i++;
 				}
 		}
 	}
@@ -105,8 +100,6 @@ class LetterFrequencyReducer extends Reducer<Text, Text, Text, Text> {
 			totalRowOccurences = totalRowOccurences + occurence;
 		}
 		nextCharactersNumber = nextCharactersNumber + calculateWhitespace(totalRowOccurences) + "|" + totalRowOccurences;
-
-
 		context.write(key, new Text(nextCharactersNumber));
 	}
 
