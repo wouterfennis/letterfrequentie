@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.hadoop:hadoop-yarn-server-common:2.4.0.2.1.1.0-385">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-yarn-server-common/2.4.0.2.1.1.0-385/hadoop-yarn-server-common-2.4.0.2.1.1.0-385.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-yarn-server-common/2.4.0.2.1.1.0-385/hadoop-yarn-server-common-2.4.0.2.1.1.0-385-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-yarn-server-common/2.4.0.2.1.1.0-385/hadoop-yarn-server-common-2.4.0.2.1.1.0-385-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
